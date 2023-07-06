@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:project_uas/components/whislist.dart';
 import 'package:project_uas/components/home.dart';
-import 'package:project_uas/components/activity.dart';
 import 'package:project_uas/components/profile.dart';
+
+import '../components/activity.dart';
 
 
 class MainPage extends StatefulWidget {
