@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'PageOneWhislist.dart';
-import 'PageTwoWhislist.dart';
+// import 'PageTwoWhislist.dart';
 
 class Item {
   final String name;
@@ -10,14 +10,14 @@ class Item {
   Item({required this.name, required this.price, required this.description});
 }
 
-class WhislistPage2 extends StatefulWidget {
-  const WhislistPage2({Key? key}) : super(key: key);
+class WhislistPage extends StatefulWidget {
+  const WhislistPage({Key? key}) : super(key: key);
 
   @override
-  State<WhislistPage2> createState() => _WhislistPage2State();
+  State<WhislistPage> createState() => _WhislistPageState();
 }
 
-class _WhislistPage2State extends State<WhislistPage2> {
+class _WhislistPageState extends State<WhislistPage> {
   List<Item> items = [
     Item(
       name: 'Business Foundation',
@@ -54,15 +54,16 @@ class _WhislistPage2State extends State<WhislistPage2> {
           centerTitle: true,
           bottom: const TabBar(
             tabs: [
-              Tab(text: 'PESAN'),
-              Tab(text: 'BAYAR')
+              Tab(text: 'Ordered'),
+              Tab(text: 'Cancelled')
             ],
           ),
         ),
         body: TabBarView(
           children: [
             PageOneWhislist(),
-            PageTwoWhislist(cartItems: cartItems, items:[]),
+            Center(child: Text('No found Order'),)
+            // PageTwoWhislist(cartItems: cartItems, items:[]),
           ],
         ),
       ),
